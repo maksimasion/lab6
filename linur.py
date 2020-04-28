@@ -39,7 +39,7 @@ if __name__ == '__main__':
 
     a = np.array ([X[k-1], Y[k-1]-6])
 
-    pylab.annotate (u'Минимум',
+    pylab.annotate (u'Точка минимума',
                     xy=(X1[0], Y1[0]),
                     xytext = a,
                     arrowprops = arrowprops)
