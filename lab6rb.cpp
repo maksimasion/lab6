@@ -156,7 +156,7 @@ void rosen(double *x0, double eps = 0.001) {
 	traekt.close();
 	cout << "Iteration: " << i << endl;
 	cout << "Xminimum: (" << xn[0] << ", " << xn[1] << ")" << endl;
-	cout << "f(" << xn[0] << ", " << xn[1] << ") = " << f(xn) << endl;
+	cout << "fminimum = " << f(xn) << endl;
 }
 
 int main()
