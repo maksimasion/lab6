@@ -154,15 +154,15 @@ void rosen(double *x0, double eps = 0.001) {
 	};
 
 	traekt.close();
-	cout << "iter: " << i << endl;
-	cout << "xmin: (" << xn[0] << ", " << xn[1] << ")" << endl;
+	cout << "Iteration: " << i << endl;
+	cout << "Xminimum: (" << xn[0] << ", " << xn[1] << ")" << endl;
 	cout << "f(" << xn[0] << ", " << xn[1] << ") = " << f(xn) << endl;
 }
 
 int main()
 {
 	double x0[] = { 6., 7. };
-	cout << "Rosenbroke method:\n";
+	cout << "Method Rosenbroka:\n";
 	rosen(x0);
 	system("pause");
 	system("python rb.py");
