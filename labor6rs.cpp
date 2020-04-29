@@ -70,7 +70,7 @@ int main() {
 
 	ofstream fout;
 	fout << x << '\n';
-	fout.open("direction.dat");
+	fout.open("rs.dat");
 	do {
 		bool success = false;
 		Vector d, z;
@@ -100,34 +100,6 @@ int main() {
 	fout.close();
 
 	cout <<"Min:"<< x << ' ' <<"Iter:"<< k << endl;
-
-	vector<double> x1;
-	vector<double> x2;
-	fout.open("x1.dat");
-
-	for (double x = 0; x < 500; x += 0.1) {
-		x1.push_back(x);
-		fout << x << '\n';
-	}
-
-	fout.close();
-	fout.open("x2.dat");
-
-	for (double x = 0; x < 70; x += 0.1) {
-		x2.push_back(x);
-		fout << x << '\n';
-	}
-
-	fout.close();
-	fout.open("f.dat");
-
-	for (size_t j = 0; j < x2.size(); j++) {
-		for (size_t i = 0; i < x1.size(); i++) {
-			fout << f(Vector(x1[i], x2[j])) << ' ';
-		}
-		fout << '\n';
-	}
-	fout.close();
-
-	system("linurrs.py");
+	
+	system("rs.py");
 }
