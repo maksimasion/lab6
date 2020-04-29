@@ -40,7 +40,7 @@ double f_s(double *x, double a, double *p) {
 	return f(x_new);
 }
 
-double svn(double *x, double *p) {
+double sw(double *x, double *p) {
 	double a = 0;
 	double h = 0.05;
 	for (int i = 0; i < 1000; i++) {
@@ -62,7 +62,7 @@ double svn(double *x, double *p) {
 
 double mki(double *x, double *p) { // Метод квадратичной интерполяции
 	double h = 0.025;
-	double a = svn(x, p);
+	double a = sw(x, p);
 	double a1 = a, a2, a3, a_min, a_star;
 	do {
 		a2 = a1 + h;
