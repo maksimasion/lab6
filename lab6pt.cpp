@@ -41,7 +41,7 @@ int main() {
 		if (i == 0)  x[i] = (paul(x[i], 0.01, i) - alpha);
 		else x[i] = paul(x[i], 0.01, i);
 	}
-	cout << "Method Pauella: x[0] = " << x[0] << " x[1] =  " << x[1] << " func(x1, x2) = " << g(x) << " In iterations " << xt[199] << endl;
+	cout << "Method Pauella: x1min = " << x[0] << " x2min =  " << x[1] << " fmin = " << g(x) << endl << "  Iterations " << xt[199] << endl;
 	for (int i = 0; i < 16; i++) {
 		if (i == 0 && fabs(xt[0])<beta && fabs(yt[0])<beta) {
 			fout << xt[0]<< " " << yt[0] << endl;
@@ -51,7 +51,7 @@ int main() {
 		}
 	}
 	fout.close();
-	system("python pt.py");
+	system("pt.py");
 	return 0;
 }
 
